@@ -19,4 +19,9 @@ public class EnvLoader {
             System.out.println(e.getMessage());
         }
     }
+
+    public static String returnAPIKey(){
+        loadEnv("resources/.env");
+        return System.getProperty("API_KEY");
+    }
 }
