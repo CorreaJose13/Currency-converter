@@ -15,8 +15,8 @@ public class ConversionController {
     }
 
     public double convert(Conversion conversion) {
-        String fromCurrency= conversion.getFromCurrency();
-        String toCurrency= conversion.getToCurrency();
+        String fromCurrency= conversion.getFromCurrency().toUpperCase();
+        String toCurrency= conversion.getToCurrency().toUpperCase();
         Double amount= conversion.getAmountToConvert();
         if (!exchangeRates.containsKey(fromCurrency) || !exchangeRates.containsKey(toCurrency)) {
             throw new IllegalArgumentException("Currency code not found");
