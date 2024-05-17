@@ -38,14 +38,14 @@ public class Processor {
                         if (!conversions.isEmpty()){
                             System.out.println(conversions);
                         }
-                        System.out.println("No has realizado ninguna conversión");
+                        System.out.println("Error: You have not performed any conversion");
                         break;
                     default:
-                        System.out.println("Opción inválida. Por favor, ingrese un valor válido.");
+                        System.out.println("Invalid option. Please enter a valid value.");
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Opción inválida. Por favor, ingrese un valor válido.");
+                System.out.println("Invalid option. Please enter a valid value.");
                 reader.nextLine();
             } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());

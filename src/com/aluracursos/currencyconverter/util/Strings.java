@@ -5,24 +5,23 @@ public class Strings {
         return """
                 ****************************************************************
                 
-                *** Conversor de moneda ***
+                *** Currency Converter ***
                 
-                Aquí tienes una lista de todas las monedas soportadas por
-                este programa:
+                Here is a list of all currencies supported by this program:
                 https://www.exchangerate-api.com/docs/supported-currencies
                 
-                O aquí tienes algunos ejemplos de las monedas disponibles:
+                Or here are some examples of the currencies available:
                 
-                Moneda                Codigo
+                Currency          Code
                 
-                Dólar estadounidense  [USD]
-                Euro                  [EUR]
-                Peso mexicano         [MXN]
-                Real brasileño        [BRL]
-                Peso argentino        [ARS]
-                Peso colombiano       [COP]
-                Peso chileno          [CLP]
-                Boliviano             [BOB]
+                US Dollar         [USD]
+                Euro              [EUR]
+                Mexican Peso      [MXN]
+                Brazilian Real    [BRL]
+                Argentine Peso    [ARS]
+                Colombian Peso    [COP]
+                Chilean Peso      [CLP]
+                Bolivian Peso     [BOB]
                 
                 """;
     }
@@ -31,11 +30,11 @@ public class Strings {
         return """
                 ****************************************************************
                 
-                Digita una de las siguientes opciones:
+                 Type one of the following options:
                 
-                1. Realizar nueva conversión
-                2. Generar historial de conversiones
-                0. Finalizar programa
+                 1. Perform new conversion.
+                 2. Generate conversion history.
+                 0. End program.
                 
                 """;
     }
