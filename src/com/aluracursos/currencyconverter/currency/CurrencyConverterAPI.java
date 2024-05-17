@@ -19,7 +19,12 @@ public class CurrencyConverterAPI {
         }
 
         Processor processor= new Processor();
-        processor.process(converter);
+        try {
+            processor.process(converter);
+        } catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 
 }
