@@ -52,7 +52,7 @@ public class Processor {
                 System.out.println(e.getMessage());
             }
         }
-
+        System.out.println("Program ended.");
     }
 
     private Conversion createConversion (ConversionController converter){
