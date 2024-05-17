@@ -4,7 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class EnvLoader {
-    public static void loadEnv(String filePath) {
+    private static void loadEnv() {
+        String filePath= "resources/.env";
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -21,7 +22,7 @@ public class EnvLoader {
     }
 
     public static String returnAPIKey(){
-        loadEnv("resources/.env");
+        loadEnv();
         return System.getProperty("API_KEY");
     }
 }
