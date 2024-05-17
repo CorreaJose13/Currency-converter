@@ -35,7 +35,10 @@ public class Processor {
                         conversions.add(conversion);
                         break;
                     case 2:
-                        System.out.println(conversions);
+                        if (!conversions.isEmpty()){
+                            System.out.println(conversions);
+                        }
+                        System.out.println("No has realizado ninguna conversión");
                         break;
                     default:
                         System.out.println("Opción inválida. Por favor, ingrese un valor válido.");
@@ -44,6 +47,8 @@ public class Processor {
             } catch (InputMismatchException e) {
                 System.out.println("Opción inválida. Por favor, ingrese un valor válido.");
                 reader.nextLine();
+            } catch (IllegalArgumentException e){
+                System.out.println(e.getMessage());
             }
         }
 
