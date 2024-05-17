@@ -33,7 +33,7 @@ public class Conversion {
                 ", from: " + fromCurrency +
                 " to: " + toCurrency +
                 " , "+ amountToConvert +" " + fromCurrency+ " equals to "+
-                amountConverted + " " + toCurrency;
+                amountConverted + " " + toCurrency + "\n";
     }
 
     public String getFromCurrency() {
