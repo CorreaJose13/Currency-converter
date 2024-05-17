@@ -17,14 +17,21 @@ public class Conversion {
 
     public static Conversion reader (){
         Scanner reader = new Scanner(System.in);
-        System.out.println("Digite el código de la moneda de origen:");
+        System.out.println("Enter the source currency code:");
         String fromCurrency= reader.next();
-        System.out.println("Digite el código de la moneda destino:");
+        System.out.println("Enter the target currency code:");
         String toCurrency= reader.next();
-        System.out.println("Digite la cantidad a convertir:");
+        System.out.println("Enter the amount to be converted:");
         String amount= reader.next();
 
-        return new Conversion(fromCurrency,toCurrency,Double.parseDouble(amount));
+        double doubleAmount;
+        try{
+            doubleAmount=Double.parseDouble(amount);
+        }catch (NumberFormatException e){
+            throw new IllegalArgumentException("Can't operate amount value: Please use a valid input");
+        }
+
+        return new Conversion(fromCurrency,toCurrency,doubleAmount);
     }
 
     @Override
