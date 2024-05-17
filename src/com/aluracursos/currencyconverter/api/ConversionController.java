@@ -1,5 +1,7 @@
 package com.aluracursos.currencyconverter.api;
 
+import com.aluracursos.currencyconverter.models.Conversion;
+
 import java.util.Map;
 
 public class ConversionController {
@@ -12,7 +14,10 @@ public class ConversionController {
         this.exchangeRates = exchangeRates;
     }
 
-    public double convert(double amount, String fromCurrency, String toCurrency) {
+    public double convert(Conversion conversion) {
+        String fromCurrency= conversion.getFromCurrency();
+        String toCurrency= conversion.getToCurrency();
+        Double amount= conversion.getAmountToConvert();
         if (!exchangeRates.containsKey(fromCurrency) || !exchangeRates.containsKey(toCurrency)) {
             throw new IllegalArgumentException("Currency code not found");
         }
