@@ -37,6 +37,7 @@ public class Processor {
                     case 2:
                         if (!conversions.isEmpty()){
                             System.out.println(conversions);
+                            break;
                         }
                         System.out.println("Error: You have not performed any conversion");
                         break;

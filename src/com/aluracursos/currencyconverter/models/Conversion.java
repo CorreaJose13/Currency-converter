@@ -36,11 +36,11 @@ public class Conversion {
 
     @Override
     public String toString() {
-        return "Conversion made at: " + dateAndHour +
+        return "( Conversion made at: " + dateAndHour +
                 ", from: " + fromCurrency +
                 " to: " + toCurrency +
                 " , "+ amountToConvert +" " + fromCurrency+ " equals to "+
-                amountConverted + " " + toCurrency + "\n";
+                amountConverted + " " + toCurrency+ " )" + "\n";
     }
 
     public String getFromCurrency() {
